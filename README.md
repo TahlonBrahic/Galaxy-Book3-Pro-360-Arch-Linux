@@ -10,3 +10,8 @@ git clone https://github.com/TahlonBrahic/Galaxy-Book3-Pro-360-Arch-Linux.git
 cd Galaxy-Book3-Pro-360-Arch-Linux
 chmod +x install.sh
 ./install.sh
+
+## Resources
+Below are a list of resources I used to help me diagnose and solve some issues:
+https://www.reddit.com/r/linuxquestions/comments/p4zz2u/galaxy_book_pro_360_issues_with_linux/
+https://eu.community.samsung.com/t5/computers-it/issues-with-linux-on-the-samsung-book-pro-360/m-p/4243492#M4184
