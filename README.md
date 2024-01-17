@@ -110,11 +110,12 @@ sudo pacman -S git
 ```
 
 ## Resources
-Below are a list of resources I used to help me diagnose and solve some issues: 
 
-https://www.reddit.com/r/linuxquestions/comments/p4zz2u/galaxy_book_pro_360_issues_with_linux/ 
+Below are some valuable resources that can assist in troubleshooting and enhancing the setup for Galaxy Book3 Pro 360 on Arch Linux:
 
-https://eu.community.samsung.com/t5/computers-it/issues-with-linux-on-the-samsung-book-pro-360/m-p/4243492#M4184 
+- [Galaxy Book Pro 360 Issues with Linux (Reddit Discussion)](https://www.reddit.com/r/linuxquestions/comments/p4zz2u/galaxy_book_pro_360_issues_with_linux/)
+- [Issues with Linux on the Samsung Book Pro 360 (Samsung Community Discussion)](https://eu.community.samsung.com/t5/computers-it/issues-with-linux-on-the-samsung-book-pro-360/m-p/4243492#M4184)
+- [Galaxy Book2 Pro Linux GitHub Repository](https://github.com/joshuagrisham/galaxy-book2-pro-linux) - Inspiration for this project.
 
 https://github.com/joshuagrisham/galaxy-book2-pro-linux (Where I got the inspiration for this project) 
 
