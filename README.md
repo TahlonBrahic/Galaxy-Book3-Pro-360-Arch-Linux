@@ -109,6 +109,28 @@ Before proceeding with the installation, ensure you have `git` installed to clon
 sudo pacman -S git
 ```
 
+## Audio Fix
+
+Out-of-the-box, the audio might not work properly on some Samsung Galaxy laptops. Follow these steps to apply the audio fix:
+
+### Steps to Install Audio Fix
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/TahlonBrahic/Galaxy-Book3-Pro-360-Arch-Linux.git
+   ```
+
+2. Change directories:
+   ```bash
+   cd Galaxy-Book3-Pro-360-Arch-Linux
+   ```
+
+3. Make the installation script executable and run it:
+   ```bash
+   chmod +x install-audio.sh
+   ./audio-fix-installer.sh
+   ```
+
 ## Resources
 
 Below are some valuable resources that can assist in troubleshooting and enhancing the setup for Galaxy Book3 Pro 360 on Arch Linux:
