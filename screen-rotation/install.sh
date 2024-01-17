@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Automatically find the primary (active) screen output
-SCREEN=$(wlr-randr | grep -E '^[[:alnum:]]+-[[:digit:]]+:.*' | grep -E 'Enabled: yes' | cut -d ':' -f 1 | head -n 1)
+SCREEN=$(wlr-randr | awk '/^[[:alnum:]]+-[[:digit:]]+/{display=$1} /Enabled: yes/{print display; exit}')
+
 
 if [ -z "$SCREEN" ]; then
     echo "No active screen found."
