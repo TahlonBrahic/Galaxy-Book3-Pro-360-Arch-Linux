@@ -97,18 +97,17 @@ In this setup, I have utilized Hyprdots for optimizing system configuration. Thi
 - `oh-my-zsh-git`: For Zsh plugins.
 - `zsh-theme-powerlevel10k-git`: Theme for Zsh.
 
+# Installation of Fixes for Galaxy Book3 Pro 360 on Arch Linux
 
-## Audio
-Out of the box audio does not work on any of the Samsung Galaxy laptops.
+This guide provides steps to set up various fixes for your Samsung Galaxy Book3 Pro 360 running Arch Linux, including an automatic screen rotation feature and audio fixes.
 
-### Audio-Fix Install
-git clone https://github.com/TahlonBrahic/Galaxy-Book3-Pro-360-Arch-Linux.git
+### Prerequisites
 
-cd Galaxy-Book3-Pro-360-Arch-Linux
+Before proceeding with the installation, ensure you have `git` installed to clone the repository. If not, you can install it using:
 
-chmod +x install.sh
-
-./install.sh
+```bash
+sudo pacman -S git
+```
 
 ## Resources
 Below are a list of resources I used to help me diagnose and solve some issues: 
