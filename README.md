@@ -1,6 +1,102 @@
-# Galaxy Book3 Pro 360 Arch Linux Guide and Scripts
-This guide takes inspiration from https://github.com/joshuagrisham/galaxy-book2-pro-linux
-the main difference is that many of the fixes needed further work arounds or just didn't work because of the difference in firmware in addition to this being the 360 model which seems to differ greatly from regular model. Because of this reason I am creating my own guide for the fixes that I took in order to make Arch Linux run on this laptop.
+## Guide for Arch Linux on Samsung Galaxy Book3 Pro 360
+
+### Introduction
+This guide is designed to assist users in setting up Arch Linux on the Samsung Galaxy Book3 Pro 360. It draws inspiration from an existing guide for the Galaxy Book2 Pro ([source](https://github.com/joshuagrisham/galaxy-book2-pro-linux)). However, due to significant firmware differences between models and the unique characteristics of the 360 model, many of the fixes from the original guide required additional workarounds or adaptations. Therefore, this guide aims to provide tailored solutions for the specific challenges encountered with the Samsung Galaxy Book3 Pro 360 model.
+
+### Notable Differences and Adaptations
+- **Firmware Variations**: The Samsung Galaxy Book3 Pro 360 has different firmware compared to the regular model, necessitating distinct approaches.
+- **Model-Specific Challenges**: The 360 model's unique features require specific attention, especially regarding hardware compatibility and functionality under Arch Linux.
+
+### Hyprdots Configuration
+In this setup, I have utilized Hyprdots for optimizing system configuration. This includes:
+- Custom scripts for dynamic hardware detection.
+- Enhanced settings for performance and usability.
+- Integration with Hyprland and other related tools to ensure a seamless user experience.
+## Package List and Descriptions
+
+### Kernel Headers
+- `linux-headers`: Main kernel headers (auto detected from `/usr/lib/modules/`).
+- `linux-zen-headers`: Zen kernel headers (auto detected from `/usr/lib/modules/`).
+- `linux-lts-headers`: LTS kernel headers (auto detected from `/usr/lib/modules/`).
+
+### NVIDIA Drivers
+- `nvidia-dkms`: NVIDIA drivers (auto detected from `lspci -k | grep -A 2 -E "(VGA|3D)"`).
+- `nvidia-utils`: NVIDIA utilities (auto detected from `lspci -k | grep -A 2 -E "(VGA|3D)"`).
+
+### Pipewire (Audio and Video)
+- `pipewire`: Audio and video server.
+- `pipewire-alsa`: For audio.
+- `pipewire-audio`: For audio.
+- `pipewire-jack`: For audio.
+- `pipewire-pulse`: For audio.
+- `gst-plugin-pipewire`: For audio.
+- `wireplumber`: Audio and video session manager.
+
+### Networking
+- `networkmanager`: Network manager.
+- `network-manager-applet`: Network manager tray.
+
+### Bluetooth
+- `bluez`: For Bluetooth.
+- `bluez-utils`: Bluetooth utilities.
+- `blueman`: Bluetooth tray.
+
+### Display Manager (Login)
+- `sddm-git`: Display manager for login.
+- `qt5-wayland`: For QT Wayland XDP.
+- `qt6-wayland`: For QT Wayland XDP.
+- `qt5-quickcontrols`: For SDDM theme.
+- `qt5-quickcontrols2`: For SDDM theme.
+- `qt5-graphicaleffects`: For SDDM theme.
+
+### Hyprland (Window Manager)
+- `hyprland-git`: Main window manager (`hyprland-nvidia-git` if NVIDIA card is detected).
+- `dunst`: Graphical notification daemon.
+- `rofi-lbonn-wayland-git`: App launcher.
+- `waybar-hyprland-git`: Status bar.
+- `swww`: Wallpaper app.
+- `swaylock-effects-git`: Lockscreen.
+- `wlogout`: Logout screen.
+- `grimblast-git`: Screenshot tool.
+- `slurp`: Selects region for screenshot/screenshare.
+- `swappy`: Screenshot editor.
+- `cliphist`: Clipboard manager.
+
+### Dependencies
+- `polkit-kde-agent`: Authentication agent.
+- `xdg-desktop-portal-hyprland`: XDG Desktop Portal.
+- `pacman-contrib`: For system update check.
+- `python-pyamdgpuinfo`: For AMD GPU info.
+- `parallel`: For parallel processing.
+- `jq`: To read JSON.
+- `imagemagick`: For image processing.
+- `qt5-imageformats`: For Dolphin image thumbnails.
+- `ffmpegthumbs`: For Dolphin video thumbnails.
+- `kde-cli-tools`: For Dolphin open with option.
+- `brightnessctl`: Brightness control for laptops.
+- `pavucontrol`: Audio settings GUI.
+- `pamixer`: For Waybar audio.
+
+### Theme
+- `nwg-look`: Theming GTK apps.
+- `kvantum`: Theming QT apps.
+- `qt5ct`: Theming QT5 apps.
+
+### Applications
+- `firefox`: Browser.
+- `kitty`: Terminal.
+- `neofetch`: Fetch tool.
+- `dolphin`: KDE file manager.
+- `visual-studio-code-bin`: GUI code editor.
+- `vim`: Text editor.
+- `ark`: KDE file archiver.
+
+### Shell
+- `zsh`: Main shell.
+- `eza`: Colorful file lister.
+- `oh-my-zsh-git`: For Zsh plugins.
+- `zsh-theme-powerlevel10k-git`: Theme for Zsh.
+
 
 ## Audio
 Out of the box audio does not work on any of the Samsung Galaxy laptops.
