@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+
 get_orientation() {
     timeout 2 monitor-sensor | grep --line-buffered -oP 'Accelerometer orientation changed: \K.*' | tail -1
 }
