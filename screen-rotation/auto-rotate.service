@@ -3,7 +3,7 @@ Description=Automatic Screen Rotation
 After=graphical.target
 
 [Service]
-Environment="XDG_RUNTIME_DIR=/run/user/%U"
+Environment="XDG_RUNTIME_DIR=/run/user/$(id -u $(logname))"
 ExecStart=/usr/local/bin/auto-rotate.sh
 Restart=always
 RestartSec=3
