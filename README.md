@@ -1,6 +1,6 @@
-## Guide for Arch Linux on Samsung Galaxy Book3 Pro 360
+# Guide for Arch Linux on Samsung Galaxy Book3 Pro 360
 
-### Introduction
+## Introduction
 This guide is designed to assist users in setting up Arch Linux on the Samsung Galaxy Book3 Pro 360. It draws inspiration from an existing guide for the Galaxy Book2 Pro ([source](https://github.com/joshuagrisham/galaxy-book2-pro-linux)). However, due to significant firmware differences between models and the unique characteristics of the 360 model, many of the fixes from the original guide required additional workarounds or adaptations. Therefore, this guide aims to provide tailored solutions for the specific challenges encountered with the Samsung Galaxy Book3 Pro 360 model.
 
 ### Notable Differences and Adaptations
@@ -12,6 +12,7 @@ In this setup, I have utilized Hyprdots for optimizing system configuration. Thi
 - Custom scripts for dynamic hardware detection.
 - Enhanced settings for performance and usability.
 - Integration with Hyprland and other related tools to ensure a seamless user experience.
+
 ## Package List and Descriptions
 
 ### Kernel Headers
@@ -97,26 +98,62 @@ In this setup, I have utilized Hyprdots for optimizing system configuration. Thi
 - `oh-my-zsh-git`: For Zsh plugins.
 - `zsh-theme-powerlevel10k-git`: Theme for Zsh.
 
+# Installation of Fixes for Galaxy Book3 Pro 360 on Arch Linux
 
-## Audio
-Out of the box audio does not work on any of the Samsung Galaxy laptops.
+This guide provides steps to set up various fixes for your Samsung Galaxy Book3 Pro 360 running Arch Linux, including an automatic screen rotation feature and audio fixes.
 
-### Audio-Fix Install
-git clone https://github.com/TahlonBrahic/Galaxy-Book3-Pro-360-Arch-Linux.git
+### Prerequisites
 
-cd Galaxy-Book3-Pro-360-Arch-Linux
+Before proceeding with the installation, ensure you have `git` installed to clone the repository. If not, you can install it using:
 
-chmod +x install.sh
+```bash
+sudo pacman -S git
+```
 
-./install.sh
+## Audio Fix
+
+Out-of-the-box, the audio might not work properly on some Samsung Galaxy laptops. Follow these steps to apply the audio fix:
+
+### Steps to Install Audio Fix
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/TahlonBrahic/Galaxy-Book3-Pro-360-Arch-Linux.git
+   ```
+
+2. **Change directories**:
+   ```bash
+   cd Galaxy-Book3-Pro-360-Arch-Linux/audio
+   ```
+
+3. **Make the installation script executable and run it**
+   ```bash
+   chmod +x install-audio.sh
+   ./audio-fix-service-installer.sh
+   ```
+   
+## Screen Rotation Fix
+
+To enable automatic screen rotation on your Galaxy Book3 Pro 360, you can install a script that manages this functionality.
+
+### Steps to Install Screen Rotation Fix
+
+1. **Navigate to the Screen Rotation Script Directory:**
+   ```bash
+   cd ..
+   cd screen-rotation
+   ```
+
+2. **Make the Installation Script Executable and Run It:**
+   ```bash
+   chmod +x install-rotation.sh
+   ./auto-rotate-service-installer.sh
+   ```
 
 ## Resources
-Below are a list of resources I used to help me diagnose and solve some issues: 
 
-https://www.reddit.com/r/linuxquestions/comments/p4zz2u/galaxy_book_pro_360_issues_with_linux/ 
+Below are some valuable resources that can assist in troubleshooting and enhancing the setup for Galaxy Book3 Pro 360 on Arch Linux:
 
-https://eu.community.samsung.com/t5/computers-it/issues-with-linux-on-the-samsung-book-pro-360/m-p/4243492#M4184 
-
-https://github.com/joshuagrisham/galaxy-book2-pro-linux (Where I got the inspiration for this project) 
-
-
+- [Galaxy Book Pro 360 Issues with Linux (Reddit Discussion)](https://www.reddit.com/r/linuxquestions/comments/p4zz2u/galaxy_book_pro_360_issues_with_linux/)
+- [Issues with Linux on the Samsung Book Pro 360 (Samsung Community Discussion)](https://eu.community.samsung.com/t5/computers-it/issues-with-linux-on-the-samsung-book-pro-360/m-p/4243492#M4184)
+- [Galaxy Book2 Pro Linux GitHub Repository](https://github.com/joshuagrisham/galaxy-book2-pro-linux) - Inspiration for this project.
