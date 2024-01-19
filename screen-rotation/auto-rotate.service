@@ -1,11 +1,14 @@
 [Unit]
-Description=Automatic Screen Rotation 
+Description=Automatic Screen Rotation
+After=graphical.target
 
 [Service]
+Environment="XDG_RUNTIME_DIR=/run/user/%U"
 ExecStart=/usr/local/bin/auto-rotate.sh
 Restart=always
 RestartSec=3
-Environment="XDG_RUNTIME_DIR=/run/user/%I"
 
 [Install]
 WantedBy=default.target
+Description=Automatic Screen Rotation
+After=graphical.target

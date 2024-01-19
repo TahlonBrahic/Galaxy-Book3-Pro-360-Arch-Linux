@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Copy the rotation script to /usr/local/bin
-cp auto-rotate.sh /usr/local/bin/auto-rotate
-chmod +x /usr/local/bin/auto-rotate
+cp auto-rotate.sh /usr/local/bin/
+chmod +x /usr/local/bin/auto-rotate.sh
 
 # Copy the systemd service file to /etc/systemd/system
 cp auto-rotate.service /etc/systemd/system/
