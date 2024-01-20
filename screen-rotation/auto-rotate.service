@@ -3,8 +3,8 @@ Description=Automatic Screen Rotation
 After=graphical.target
 
 [Service]
-Environment="XDG_RUNTIME_DIR=/run/user/$(id -u $(logname))"
-Environment="WAYLAND_DISPLAY=wayland"
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+Environment="WAYLAND_DISPLAY=wayland-1"
 ExecStart=/usr/local/bin/auto-rotate.sh
 Restart=always
 RestartSec=3
