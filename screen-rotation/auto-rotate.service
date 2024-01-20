@@ -4,7 +4,7 @@ After=graphical.target
 
 [Service]
 Environment="XDG_RUNTIME_DIR=/run/user/$(id -u $(logname))"
-Environment="DISPLAY=:0"
+Environment="WAYLAND_DISPLAY=wayland-0"
 ExecStart=/usr/local/bin/auto-rotate.sh
 Restart=always
 RestartSec=3
