@@ -1,8 +1,13 @@
 #!/bin/bash
-#Inspired by https://www.reddit.com/r/hyprland/comments/11lpxcq/config_to_turn_off_main_laptop_display_when/
 
 # Define the path to the Hyprland configuration file
 CONFIG_FILE="$HOME/.config/hypr/hyprland.conf"
+
+# Define the path for the backup file
+BACKUP_FILE="$HOME/.config/hypr/hyprland.conf.backup"
+
+# Create a backup of the original configuration file
+cp "$CONFIG_FILE" "$BACKUP_FILE"
 
 # Configuration lines to append
 CONFIG_LINES="# trigger when the switch is turning off
@@ -15,4 +20,5 @@ echo "$CONFIG_LINES" >> "$CONFIG_FILE"
 
 # Optional: Display a confirmation message
 echo "Configuration has been appended to $CONFIG_FILE"
+echo "Backup of original configuration is saved as $BACKUP_FILE"
 
