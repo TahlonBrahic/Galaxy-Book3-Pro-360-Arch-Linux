@@ -4,7 +4,7 @@ Description=Audio Fix
 [Service]
 ExecStart=/usr/local/bin/necessary-verbs.sh
 Restart=always
-RestartSec=10
+RestartSec=3
 
 [Install]
 WantedBy=default.target
