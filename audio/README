@@ -1,10 +1,6 @@
 Make sure to blacklist snd-hda-intel and add snd_intel_dspcfg.dsp_driver=1 to arch.conf
 
 ```bash
-blacklist snd-hda-intel
-```
-
-```bash
 sudo nano /boot/loader/entries/arch.conf
 ```
 
