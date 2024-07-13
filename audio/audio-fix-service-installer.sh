@@ -7,7 +7,7 @@ SERVICE_SRC="audio-fix.service"
 SERVICE_DEST="/etc/systemd/system/audio-fix.service"
 
 # Ensure running as root
-if [ "$EUID" -ne 0 ]
+if [ "$EUID" -ne 0 ] && [ -z "$SUDO_USER" ]
   then echo "Please run as root"
   exit
 fi
