@@ -146,7 +146,7 @@ To enable automatic screen rotation on your Galaxy Book3 Pro 360, you can instal
 
 2. **Make the Installation Script Executable and Run It:**
    ```bash
-   chmod +x install-rotation.sh
+   chmod +x auto-rotate-service-installer.sh
    ./auto-rotate-service-installer.sh
    ```
 
