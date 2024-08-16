@@ -128,7 +128,7 @@ Out-of-the-box, the audio might not work properly on some Samsung Galaxy laptops
 
 3. **Make the installation script executable and run it**
    ```bash
-   chmod +x install-audio.sh
+   chmod +x audio-fix-service-installer.sh
    ./audio-fix-service-installer.sh
    ```
    
